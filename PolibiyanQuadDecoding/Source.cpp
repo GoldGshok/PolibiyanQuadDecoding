@@ -6,7 +6,7 @@
 
 using namespace std;
 
-vector<int> readKeyFile(char **quad, string &d, int &m, int &n);
+//vector<int> readKeyFile(char **quad, string &d, int &m, int &n);
 void readFile(string &text);
 void writeFile(string &text);
 void createQuad(char **quad, string d, vector<int> v, int m, int n);
@@ -35,7 +35,7 @@ void main() {
 	}
 
 	f.seekg(3, ios_base::cur);
-	dictionary.resize(35);
+	dictionary.resize(m * n);
 	f.read((char*)dictionary.data(), dictionary.size());
 	f.close();
 
@@ -59,7 +59,7 @@ void main() {
 	system("pause");
 }
 
-vector<int> readKeyFile(char **quad, string &d, int &m, int &n) {
+/*vector<int> readKeyFile(char **quad, string &d, int &m, int &n) {
 	vector<int> v;
 	ifstream f("key.txt");
 	
@@ -82,7 +82,7 @@ vector<int> readKeyFile(char **quad, string &d, int &m, int &n) {
 	}
 
 	return v;
-}
+}*/
 
 void createQuad(char **quad, string d, vector<int> v, int m, int n) {
 	for (int i = 0; i < m; i++)
